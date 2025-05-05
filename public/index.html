@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>App-Veiculos</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="titulo">App - Veiculos</h1>
+        <div id="container-veiculos">
+
+            <h2>Exibir Veiculos</h2>
+            <label for="ordenar-opcao">Ordem:
+                <label for="ordenar-opcao">
+                    <input type="radio" name="ordenar" id="ASC"> Crescente
+                    <input type="radio" name="ordenar" id="DESC"> Decrescente
+                </label>
+            </label>
+
+            <label for="ordenar-opt">Ordenar por:</label>
+            <select id="ordenar-opt">
+                <option  value="">Selecione...</option>
+                <option name="opc" value="nome">Nome</option>
+                <option name = "opc" value="ano_fabricacao">Ano de Fabricação</option>
+                <option name="opc" value="ano_modelo">Ano do Modelo</option>
+                <option name="opc" value="valor">Valor</option>
+            </select>
+
+
+            <ul id="exibir-veiculos">
+            </ul>
+            <input id="botao" type="submit" value="Exibir  |  Ocultar">
+        </div>
+
+        <!-- <div id="cont-cad-veiculo">
+            <h2>Cadastrar Veiculo</h2>
+            <input type="text" class="c-veiculo" id="nome" placeholder="Nome do Veiculo..." required>
+            <input type="text" class="c-veiculo" id="ano-fabricacao" placeholder="Ano de fabricacao..." required>
+            <input type="text" class="c-veiculo" id="ano-modelo" placeholder="Ano do modelo..." required>
+            <input type="text" class="c-veiculo" id="preco" placeholder="Preço do Veiculo..." required>
+            <input type="submit" id="botao-cad" value="Cadastrar">
+        </div> -->
+
+        <div id="cont-atu-veiculo">
+            <h2>Cadastrar/Atualizar Veiculo</h2>
+            <input type="text" class="c-veiculo" id="id-atualizar" placeholder="Id para Atualizar o Veiculo..." required>
+            <input type="text" class="c-veiculo" id="nome" placeholder="Nome do Veiculo..." required>
+            <input type="text" class="c-veiculo" id="ano-fabricacao" placeholder="Ano de fabricacao..." required>
+            <input type="text" class="c-veiculo" id="ano-modelo" placeholder="Ano do modelo..." required>
+            <input type="text" class="c-veiculo" id="preco" placeholder="Preço do Veiculo..." required>
+            <input type="submit" id="botao-cad" value="Cadastrar">
+            <input type="submit" id="botao-put" value="Atualizar">
+        </div>
+
+        <div id="cont-del-veiculo">
+            <h2>Remover Veiculo</h2>
+            <input type="text" id="id-veiculo" placeholder="Digite o id...">
+            <input type="submit" id="botao-del" value="Remover">
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

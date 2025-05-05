@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: beige;
+}
+#titulo{
+    margin: 10px 0;
+}
+
+#container-veiculos{
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(121, 119, 119);
+}
+
+#exibir-veiculos{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(121, 119, 119);
+}
+.veiculo{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 4px;
+    background-color: white;
+}
+
+#botao{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+    width: 150px;
+    padding: 4px;
+    background-color: rgb(222, 220, 220);
+    transition-duration: 0.5s;
+}
+
+#botao:hover{
+    cursor: pointer;
+    background-color: rgb(174, 173, 173);
+    transition-duration: 0.5s;
+}
+
+#botao:active{
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+}
+
+#cont-cad-veiculo, #cont-atu-veiculo{
+    /* border: 1px solid black; */
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(121, 119, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.c-veiculo{
+    margin: 6px;
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 250px;
+}
+
+#botao-cad, #botao-put{
+    margin: 6px 4px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+#botao-cad:hover, #botao-put:hover{
+    cursor: pointer;
+    background-color: rgb(174, 173, 173);
+    transition-duration: 0.5s;
+}
+
+#botao-cad:active, #botao-put:active{
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+}
+
+#cont-del-veiculo{
+    background-color: rgb(121, 119, 119);
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#id-veiculo{
+    border: 1px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 15px;
+    margin: 6px 2px;
+}
+
+#botao-del{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+    width: 150px;
+    padding: 4px;
+    background-color: rgb(222, 220, 220);
+    transition-duration: 0.5s;
+}
+
+#botao-del:hover{
+    cursor: pointer;
+    background-color: rgb(174, 173, 173);
+    transition-duration: 0.5s;
+}
+
+#botao-del:active{
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+}
+
