@@ -8,9 +8,9 @@ roteador_veiculos = APIRouter()
 
 veiculos_dao = VeiculoDAO()
 
-roteador_veiculos.mount("/public", StaticFiles(directory="public"), name="public")
+roteador_veiculos.mount("/static", StaticFiles(directory="public"), name="static")
 
-@roteador_veiculos("/")
+@roteador_veiculos.get("/")
 async def index():
   return FileResponse("public/index.html")
 
