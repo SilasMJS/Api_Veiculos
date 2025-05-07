@@ -3,10 +3,11 @@ FROM python:3.11.6-slim-bullseye
 
 # 2. Copy arquivos
 WORKDIR /home/app
-COPY ./requirements.txt .
+# COPY ./requirements.txt .
+COPY requirements.txt .
 
 # 3. Instalar as Dependencias
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 4. Copy arquivos
 COPY . .
@@ -15,5 +16,5 @@ COPY . .
 EXPOSE 8000
 
 # 5. Rodar a aplicação
-# CMD python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-CMD ["fastapi", "dev", "src/main.py"]
+CMD python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload --reload-dir=src
+# CMD ["fastapi", "dev", "src/main.py"]
