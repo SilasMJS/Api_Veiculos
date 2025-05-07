@@ -4,11 +4,12 @@ from veiculos_dao import VeiculoDAO
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
+
 roteador_veiculos = APIRouter()
 
 veiculos_dao = VeiculoDAO()
 
-roteador_veiculos.mount("/static", StaticFiles(directory="public"), name="static")
+roteador_veiculos.mount("/static",StaticFiles(directory="public"), name="static")
 
 @roteador_veiculos.get("/")
 async def index():
