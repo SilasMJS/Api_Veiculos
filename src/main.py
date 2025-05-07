@@ -6,7 +6,7 @@ from montadoras_routes import app as roteador_montadoras
 
 app = FastAPI()
 
-origins = ["http://127.0.0.1:5500"]
+origins = ["http://127.0.0.1:5500"] 
 
 app.add_middleware(
     CORSMiddleware,
