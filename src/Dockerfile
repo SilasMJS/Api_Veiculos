@@ -1,20 +1,21 @@
-# 1. Maquina com Python
-FROM python:3.11.6-slim-bullseye
+# Use uma imagem base do Python com a versão desejada que já tenha o FastAPI CLI instalado
+# Uma opção é usar uma imagem que já inclua ferramentas de desenvolvimento Python
+FROM python:3.11-slim-buster
 
-# 2. Copy arquivos
+# Defina o diretório de trabalho dentro do contêiner
 WORKDIR /home/app
-# COPY ./requirements.txt .
+
+# Copie os arquivos de requirements para o contêiner
 COPY requirements.txt .
 
-# 3. Instalar as Dependencias
+# Instale as dependências do Python, incluindo o FastAPI CLI
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 4. Copy arquivos
+# Copie o código da sua aplicação para o contêiner
 COPY . .
 
-# 4. Expor Porta
+# Exponha a porta em que sua aplicação FastAPI estará rodando (geralmente 8000)
 EXPOSE 8000
 
-# 5. Rodar a aplicação
-CMD python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload --reload-dir=src
-# CMD ["fastapi", "dev", "src/main.py"]
+# Comando para executar sua aplicação FastAPI usando FastAPI CLI
+CMD ["fastapi", "dev", "src/main.py", "--host", "0.0.0.0", "--port", "8000"]
