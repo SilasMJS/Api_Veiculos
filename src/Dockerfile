@@ -8,6 +8,7 @@ WORKDIR /home/app
 # Copie os arquivos de requirements para o contêiner
 COPY requirements.txt .
 
+RUN cd src
 # Instale as dependências do Python, incluindo o FastAPI CLI
 RUN pip install --no-cache-dir -r requirements.txt
 
