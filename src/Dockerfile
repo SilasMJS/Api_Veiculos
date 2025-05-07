@@ -6,7 +6,7 @@ WORKDIR /home/app
 COPY ./requirements.txt .
 
 # 3. Instalar as Dependencias
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 4. Copy arquivos
 COPY . .
