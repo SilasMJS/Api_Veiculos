@@ -1,10 +1,18 @@
 from fastapi import APIRouter, HTTPException, status
 from modelos import VeiculoCreate
 from veiculos_dao import VeiculoDAO
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 roteador_veiculos = APIRouter()
 
 veiculos_dao = VeiculoDAO()
+
+roteador_veiculos.mount("/public", StaticFiles(directory="public"), name="public")
+
+@roteador_veiculos("/")
+async def index():
+  return FileResponse("public/index.html")
 
 @roteador_veiculos.post('/veiculos', status_code=status.HTTP_201_CREATED)
 def veiculos_create(novo: VeiculoCreate):
